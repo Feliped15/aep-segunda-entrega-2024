@@ -17,7 +17,7 @@ function logar() {
             localStorage.setItem("token", JSON.stringify(token));
 
             setTimeout(() => {
-                window.location.href = "index.html";
+                window.location.href = "cadastro.html";
             }, "1000");
 
         } else {
