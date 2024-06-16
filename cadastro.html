@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Saúde e Bem-Estar</title>
+
+        <!--CSS-->
+        <link rel="stylesheet" href="assets/css/reset.css">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="assets/css/adm.css">
+    </head>
+
+    <body>
+        <!-- Modal -->
+        <div class="modal fade" id="modalCadastro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Dados do Cadastro</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class=" mb-3">
+                            <label for="codigo" class="form-label">Codigo</label>
+                            <input type="text" class="form-control" id="codigo"
+                                placeholder="Informe o codigo do Cadastro">
+                        </div>
+                        <div class=" mb-3">
+                            <label for="nome" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="nome" placeholder="Informe a Nome do Cadastro">
+                        </div>
+
+                        <div class=" mb-3">
+                            <label for="cpf" class="form-label">CPF</label>
+                            <input type="text" class="form-control" id="cpf" placeholder="Informe a cpf do Cadastro">
+                        </div>
+
+                        <div class=" mb-3">
+                            <label for="telefone" class="form-label">Telefone</label>
+                            <input type="tel" class="form-control" id="telefone"
+                                placeholder="Informe a telefone do Cadastro">
+                        </div>
+
+                        <div class=" mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email"
+                                placeholder="Informe a email do Cadastro">
+                        </div>
+
+                        <div class=" mb-3">
+                            <label for="fazAtividadeFisica" class="form-label">Faz Atividade Fisica</label>
+                            <input type="check" class="form-control" id="fazAtividadeFisica"
+                                placeholder="Informe se voce  fazAtividadeFisica do Cadastro">
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        <button type="button" class="btn btn-primary" onclick="salvar()">Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <header>
+            <div class="container">
+                <nav class="navbar bg-body-tertiary">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" id="titulo"></a>
+                        <form class="d-flex" role="search">
+                            <a class="btn btn-outline-success" href="index.html">Site</a>
+                            <a class="btn btn-success ms-3" href="cadastro.html">Configuração</a>
+                            <a class="btn btn-dark ms-3" href="login.html">Sair</a>
+                        </form>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+
+        <div class="container">
+            <div class="table-responsive mt-3">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                    data-bs-target="#modalCadastro">Novo
+                    Cadastro</button>
+                <table class="table caption-top">
+                    <caption>Listagem de Cadastro</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Codigo</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">CPF</th>
+                            <th scope="col">Telefone</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Faz Atividade Fisica</th>
+                            <th scope="col">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="listaCadastros"></tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <!--JS-->
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/scriptAdm.js"></script>
+    </body>
+
+</html>

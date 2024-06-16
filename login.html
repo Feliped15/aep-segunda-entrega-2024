@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Saúde e Bem-Estar</title>
+
+        <!--CSS-->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="assets/css/Login.css">
+    </head>
+
+    <body>
+        <div class="form-conteudo">
+            <h2>Login</h2>
+
+            <div class="form-grupo">
+                <label for="Usuario">Nome:</label>
+                <input type="text" id="username" name="Usuario" placeholder="Informe seu nome" required>
+            </div>
+
+            <div class="form-grupo">
+                <label for="senha">Senha:</label>
+                <input type="password" id="password" name="senha" placeholder="Informe sua senha" required>
+            </div>
+
+
+            <button type="button" class="btn btn-primary" onclick="logar()">Entrar</button>
+            <a class="btn btn-primary" href="index.html">Site</a>
+
+            <div class="" role="alert" id="respostaLogin" style="display: none;"></div>
+
+        </div>
+
+
+        <!--JS-->
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/Login.js"></script>
+    </body>
+
+</html>
