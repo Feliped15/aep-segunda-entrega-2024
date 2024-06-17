@@ -97,6 +97,9 @@ function editarCadastro(indice) {
 
     let modalProdutoEl = document.getElementById('modalCadastro');
     let modalProduto = bootstrap.Modal.getInstance(modalProdutoEl);
+    if (!modalProduto) {
+        modalProduto = new bootstrap.Modal(modalProdutoEl);
+    }
     modalProduto.show();
 }
 
