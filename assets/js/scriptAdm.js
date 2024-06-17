@@ -4,9 +4,13 @@ atualizarlistaCadastros();
 document.getElementById('titulo').innerHTML = "Saúde e Bem-Estar";
 
 function validaFormulario() {
+    let codigo = document.getElementById('codigo').value;
     let nome = document.getElementById('nome').value;
+    let cpf = document.getElementById('cpf').value;
+    let telefone = document.getElementById('telefone').value;
+    let email = document.getElementById('email').value;
 
-    if (!nome) {
+    if (!codigo || !nome || !cpf || !telefone || !email) {
         alert('Por favor, preencha todos os campos corretamente.');
         return false;
     } else {
@@ -25,7 +29,6 @@ function limparFormulario() {
     document.getElementById('cpf').value = '';
     document.getElementById('telefone').value = '';
     document.getElementById('email').value = '';
-    document.getElementById('fazAtividadeFisica').value = '';
 }
 
 function atualizarlistaCadastros() {
@@ -40,7 +43,6 @@ function atualizarlistaCadastros() {
             <td>${Cadastro.cpf}</td>
             <td>${Cadastro.telefone}</td>
             <td>${Cadastro.email}</td>
-            <td>${Cadastro.fazAtividadeFisica}</td>
             <td>
                 <button onclick="editarCadastro(${indice})" class="btn btn-primary me-2">Editar</button>
                 <button onclick="excluirCadastro(${indice})" class="btn btn-danger">Excluir</button>
@@ -58,7 +60,6 @@ function salvar() {
         let cpf = document.getElementById('cpf').value;
         let telefone = document.getElementById('telefone').value;
         let email = document.getElementById('email').value;
-        let fazAtividadeFisica = document.getElementById('fazAtividadeFisica').value;
 
         let indiceEdicao = -1;
         let objExistente = listaCadastros.find((element, index) => {
@@ -70,9 +71,9 @@ function salvar() {
         });
 
         if (indiceEdicao >= 0) {
-            listaCadastros[indiceEdicao] = { codigo, nome, cpf, telefone, email, fazAtividadeFisica };
+            listaCadastros[indiceEdicao] = { codigo, nome, cpf, telefone, email };
         } else {
-            listaCadastros.push({ codigo, nome, cpf, telefone, email, fazAtividadeFisica });
+            listaCadastros.push({ codigo, nome, cpf, telefone, email });
         }
 
         salvarLista();
@@ -93,7 +94,6 @@ function editarCadastro(indice) {
     document.getElementById('cpf').value = Cadastro.cpf;
     document.getElementById('telefone').value = Cadastro.telefone;
     document.getElementById('email').value = Cadastro.email;
-    document.getElementById('fazAtividadeFisica').value = Cadastro.fazAtividadeFisica;
 
     let modalProdutoEl = document.getElementById('modalCadastro');
     let modalProduto = bootstrap.Modal.getInstance(modalProdutoEl);

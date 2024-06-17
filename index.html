@@ -11,6 +11,52 @@
     </head>
 
     <body>
+
+        <!-- Modal -->
+        <div class="modal fade" id="modalCadastro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Dados da Pessoa</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class=" mb-3">
+                            <label for="codigo" class="form-label">Codigo</label>
+                            <input type="text" class="form-control" id="codigo"
+                                placeholder="Informe o codigo do Cadastro">
+                        </div>
+                        <div class=" mb-3">
+                            <label for="nome" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="nome" placeholder="Informe a Nome do Cadastro">
+                        </div>
+
+                        <div class=" mb-3">
+                            <label for="cpf" class="form-label">CPF</label>
+                            <input type="text" class="form-control" id="cpf" placeholder="Informe a cpf do Cadastro">
+                        </div>
+
+                        <div class=" mb-3">
+                            <label for="telefone" class="form-label">Telefone</label>
+                            <input type="tel" class="form-control" id="telefone"
+                                placeholder="Informe a telefone do Cadastro">
+                        </div>
+
+                        <div class=" mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email"
+                                placeholder="Informe a email do Cadastro">
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        <button type="button" class="btn btn-primary" onclick="salvar()">Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <header>
             <div class="logo">
                 <i class="fas fa-heartbeat"></i>
@@ -20,6 +66,8 @@
 
         <div class="container">
             <div class="grupos-container  p-20">
+                <a class="btn btn-info grupo" data-bs-toggle="modal" data-bs-target="#modalCadastro">Cadastrar</a>
+                <a class="btn btn-info grupo" href="login.html">Logar</a>
                 <a class="btn btn-info grupo" href="#introducao">Introdução</a>
                 <a class="btn btn-info grupo" href="#objetivo">Objetivo</a>
                 <a class="btn btn-info grupo" href="#Metodo">Método</a>

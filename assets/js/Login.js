@@ -4,7 +4,7 @@ function logar() {
     let login = document.getElementById("username").value;
     let senha = document.getElementById("password").value;
 
-    if (login != "" || senha != "") {
+    if (login != "" && senha != "") {
 
         let msg = document.getElementById('respostaLogin');
         if (login === "adm" && senha === "12345") {
@@ -32,3 +32,4 @@ function logar() {
     }
 
 }
+
